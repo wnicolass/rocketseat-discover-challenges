@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+
+    font-size: 62.5%;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    overflow: overlay;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 2.9rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.content {
+    padding-inline: 2.4rem;
+}
+
+.content .card {
+    background-color: var(--bg-cards);
+
+    width: 100%;
+
+    margin-block: 3rem;
+    padding: 3rem;
+
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+}
+
+/*----- PROFILE -----*/
+#profile .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#profile .card img {
+    width: 12.8rem;
+    height: 12.8rem;
+
+    clip-path: circle();
+    
+    border: 2px solid #00FF00;
+    border-radius: 50%;
+}
+
+#profile .card p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/*----- SOCIALS -----*/
+#socials .card ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+#socials .card ul li:not(:nth-child(7)) {
+    margin-bottom: 1rem;
+}
+
+#socials .card ul li a {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*----- TECHNOLOGIES -----*/
+#techs .card h2 {
+    margin-bottom: 2rem;
+}
+
+#techs .card ul {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#techs .card ul li {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.3rem;
+    font-weight: 700;
+
+    border-radius: 2rem;
+    width: 8.6rem;
+    height: 2.4rem;
+
+    background-color: var(--bg-techs);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----- EDUCATION -----*/
+#education .card h2 {
+    margin-bottom: 2rem;
+}
+
+#education .card ul {
+    list-style: initial;
+
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    margin-left: 3rem;
+}
+
+/*----- PROJECTS -----*/
+#projects > .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#projects .cards a {
+    color: var(--text-color);
+}
+
+#projects .cards .card header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+
+    margin-bottom: 1.5rem;
+}
+
+#projects .cards a .card p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+
+    margin-bottom: 1.5rem;
+}
+
+#projects .cards a .card footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.4rem;
+}
+
+#projects .cards a .card footer .stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#projects .cards a .card footer .branch {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#projects .cards a .card footer .language {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/*----- POSTS -----*/
+#posts .card:nth-child(2) {
+    display: flex;
+    gap: 2rem;
+}
+
+#posts .card:nth-child(2) img {
+    height: 8rem;
+    width: 8rem;
+    clip-path: circle();
+}
+
+#posts .card:nth-child(2) .info {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+#posts .card:nth-child(2) .info h3 {
+    font-size: 1.5rem;
+}
+
+#posts .card:nth-child(2) .info .subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2.0rem;
+
+    text-align: left;
+    
+    margin-top: 2.8rem;
+}
+
+#posts .card:nth-child(2) .info footer {
+    margin-top: 1.1rem;
+
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    max-width: max-content;
+}
+
+/*---- RESPONSIVE -----*/
+@media (min-width: 1024px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    
+        grid-template-areas: 
+        'A B';
+    }
+    
+    .content .col-a {
+        grid-area: A;
+        justify-self: flex-end;
+    }
+    
+    .content .col-b {
+        grid-area: B;
+        justify-self: center;
+    }
+    
+    /*----- PROFILE -----*/
+    #profile .card {
+        width: 34.8rem;
+        height: 29.2rem;
+    
+        margin-top: 4rem;
+        margin-left: 4rem;
+        margin-bottom: 3rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #profile .card img {
+        height: 12.8rem;
+        width: 12.8rem;
+        clip-path: circle();
+        margin-bottom: 3rem;
+        border: 2px solid #00FF00;
+        border-radius: 50%;
+    }
+    
+    #profile .card h1 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        line-height: 2.9rem;
+    }
+    
+    #profile .card p {
+        font-size: 1.3rem;
+        font-weight: 300;
+    
+        margin-top: 1rem;
+    }
+    
+    /*----- SOCIALS -----*/
+    #socials .card {
+        width: 34.8rem;
+        height: 34.8rem;
+        margin: 3rem 4rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+        padding: 3rem 4rem;
+    }
+    
+    #socials .card ul .social {
+        list-style: none;
+        font-size: 1.3rem;
+        margin-block: 1.5rem;
+    
+        display: flex;
+        align-items: center;
+        gap: 2.9rem;
+    }
+    
+    #socials .card ul .social a {
+        list-style: none;
+        color: var(--text-color);
+    
+        display: flex;
+        align-items: center;
+        gap: 2.9rem;
+
+        transition: all 0.3s;
+    }
+
+    #socials .card ul .social a:hover {
+        font-size: 1.5rem;
+        filter: brightness(1.3);
+    }
+    
+    /*----- TECHNOLOGIES -----*/
+    #techs .card {
+        width: 34.8rem;
+        padding: 3rem 2rem;
+    
+        margin: 3rem 4rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    #techs .card h2 {
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    #techs .card ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    #techs .card ul li {
+        font-size: 1rem;
+        color: #000000;
+        line-height: 1.3rem;
+        font-weight: 700;
+        border-radius: 2rem;
+    
+        width: 8.6rem;
+        height: 2.4rem;
+    
+        background-color: var(--bg-techs);
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /*----- EDUCATION -----*/
+    #education .card {
+        width: 34.8rem;
+    
+        margin: 4rem;
+        padding: 3rem 2rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    #education .card ul {
+        margin-top: 2rem;
+        margin-left: 4rem;
+    }
+    
+    #education .card ul li {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    
+    /*----- PROJECTS -----*/
+    #projects {
+        margin-bottom: 3.1rem;
+    }
+    
+    #projects .cards {
+        display: flex;
+    }
+    
+    #projects > .card {
+        width: 95.2rem;
+        height: 100%;
+    
+        margin-top: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 3.1rem;
+    
+        padding: 3rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #projects > .card span {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+    }
+    
+    #projects .cards .card {
+        padding: 3rem;
+        width: 46.1rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+        transition: filter 0.2s;
+    }
+    
+    #projects .cards .card:hover {
+        filter: brightness(1.3);
+    }
+    
+    #projects .cards #repositoryLink {
+        margin-right: 3rem;
+    }
+    
+    #projects .cards a .card {
+        color: var(--text-color);
+    }
+    
+    #projects .cards a .card header {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-bottom: 2.2rem;
+    
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+    }
+    
+    #projects .cards a .card p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+    
+        margin-bottom: 3.7rem;
+    }
+    
+    #projects .cards a .card footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #projects .cards a .card footer .stars {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    
+        font-size: 1.4rem;
+    }
+    
+    #projects .cards a .card footer .branch {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    
+        font-size: 1.4rem;
+    }
+    
+    #projects .cards a .card footer .language {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    
+        font-size: 1.4rem;
+    }
+    
+    /*----- POSTS -----*/
+    #posts .card:nth-child(1) {
+        width: 95.2rem;
+        height: 100%;
+    
+        margin-top: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 3.1rem;
+    
+        padding: 3rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    #posts .card:nth-child(2) {
+        padding: 3rem;
+        width: 95.2rem;
+    
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+        display: flex;
+        gap: 2rem;
+    }
+    
+    #posts .card:nth-child(2) img {
+        height: 12.8rem;
+        width: 12.8rem;
+        clip-path: circle();
+    }
+    
+    #posts .card:nth-child(2) .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #posts .card:nth-child(2) .info h3 {
+        font-size: 1.8rem;
+    
+        margin-bottom: 0.3rem;
+    }
+    
+    #posts .card:nth-child(2) .info .subtitle {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+        
+        margin-top: 2rem;
+    }
+    
+    #posts .card:nth-child(2) .info footer {
+        margin-top: 1.1rem;
+    
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
