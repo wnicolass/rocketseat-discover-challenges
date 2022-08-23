@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rocketcard</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="col-a">
+        <p>Share your #rocketcard</p>
+        <div class="card">
+          <header>
+            <img src="./assets/logo.svg" alt="rocketcard logo" />
+            <p id="userLogin">nicolau</p>
+          </header>
+          <div class="content">
+            <img
+              id="userAvatar"
+              src="http://lorempixel.com.br/200/200"
+              alt="profile pic"
+            />
+            <ul>
+              <li>
+                <img src="./assets/followers.svg" alt="followers icon" />
+                <span id="followers"></span>
+                Followers
+              </li>
+              <li>
+                <img src="./assets/following.svg" alt="following icon" />
+                <span id="following">1</span>
+                Following
+              </li>
+              <li>
+                <img src="./assets/repository.svg" alt="repository icon" />
+                <span id="repositories">1</span>
+                Respositories
+              </li>
+              <li>
+                <img src="./assets/company.svg" alt="company icon" />
+                <span id="company">Freelancer</span>
+              </li>
+              <li>
+                <img src="./assets/location.svg" alt="location icon" />
+                <span id="userLocation"></span>
+              </li>
+            </ul>
+          </div>
+          <footer>
+            <img src="./assets/logo.svg" alt="rocketseat logo" />
+            <p>ROCKETCARD</p>
+          </footer>
+        </div>
+      </section>
+
+      <section class="col-b">
+        <p>Customize card</p>
+        <button
+          onclick="changeBackgroundColor()"
+          id="changeBackgroundButton"
+          type="button"
+        >
+          Generate background
+        </button>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
