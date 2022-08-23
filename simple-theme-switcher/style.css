@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #292c35;
+  --light: #f1f1f1;
+  --label: #111;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--light);
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+
+  text-align: center;
+  height: 100%;
+  width: 100%;
+
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+.container h1 {
+  margin-top: 4rem;
+  font-size: 6rem;
+}
+
+.switcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 19rem;
+  margin-inline: auto;
+  padding: 2rem;
+
+  background-color: var(--label);
+
+  width: 28rem;
+  height: 12rem;
+
+  border-radius: 5.9rem;
+
+  position: relative;
+}
+
+.switcher::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  height: 80%;
+  width: 35%;
+  border-radius: 50%;
+  background: var(--light);
+  cursor: pointer;
+  transition: left 0.3s ease;
+}
+
+body.dark .switcher::before {
+  left: 160px;
+}
+
+.sun {
+  margin-left: 5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  align-self: center;
+
+  margin-bottom: 3rem;
+}
