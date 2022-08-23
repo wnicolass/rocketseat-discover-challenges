@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Vet.Sidebar</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="vet. logo">
+            </div>
+            <img id="menuToggle" src="./assets/menu.svg" alt="menu icon">
+        </div>
+
+        <ul class="nav-list">
+            <li>
+                <img class="search" src="./assets/search.svg" alt="search icon">
+                <input id="searchButton" type="text" placeholder="Search" />
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="link-image" src="./assets/grid.svg" alt="dashboard icon">
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="link-image" src="./assets/pet.svg" alt="pet icon">
+                    <span class="links_name">Pets</span>
+                </a>
+                <span class="tooltip">Pets</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="link-image" src="./assets/user.svg" alt="user icon">
+                    <span class="links_name">Customers</span>
+                </a>
+                <span class="tooltip">Customers</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="link-image" src="./assets/vet.svg" alt="vet icon">
+                    <span class="links_name">Vets</span>
+                </a>
+                <span class="tooltip">Vets</span>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="link-image" src="./assets/settings.svg" alt="settigs icon">
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+
+        <div class="profile-content">
+            <div class="profile">
+                <div class="profile-details">
+                    <img src="./assets/photo.jpg" alt="vet with a dog in her arms">
+                    <div class="name-job">
+                        <div class="name">Unohana</div>
+                        <div class="job">Vet</div>
+                    </div>
+                </div>
+                <img id="log-out" src="./assets/log-out.svg" alt="log-out icon">
+            </div>
+        </div>
+    </div>
+    <div class="home-content">
+        <div class="text">Dashboard</div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
